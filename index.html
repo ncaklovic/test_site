@@ -1,0 +1,42 @@
+<html>
+<body>
+	<script>
+
+		// Saving data as key/value pair
+		localStorage.setItem("name", "crobridge");
+		localStorage.setItem("color", "green");
+
+		// Updating data
+		localStorage.setItem("name", "crobridge.com");
+		localStorage.setItem("color", "Blue");
+
+		// Get the data by key
+		let name = localStorage.getItem("name");
+		console.log("This is - ", name);
+		let color = localStorage.getItem("color");
+		console.log("Value of color is - ", color);
+
+		// Get key on a given position
+		let key1 = localStorage.key(1);
+		console.log(key1);
+
+		// Get number of stored items
+		let items = localStorage.length;
+		console.log("Total number of items is ", items);
+
+		// Remove key with its value
+		//localStorage.removeItem("color");
+
+		// Delete everything
+		//localStorage.clear();
+		
+		let g1 = { name: "one", date: "today" };
+		console.log("game 1: ", g1);
+		localStorage.setItem("game", JSON.stringify(g1));
+		let g2 = JSON.parse(localStorage.getItem("game"));
+		console.log("game 2: ", g2);
+		
+		
+	</script>
+</body>
+</html>
